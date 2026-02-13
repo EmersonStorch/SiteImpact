@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site Profissional que Vende – Pronto em 15 Dias a Partir de R$1.997 | SiteImpacto</title>
+    <meta name="description" content="Crie site que atrai clientes e aumenta faturamento. Pacotes a partir de R$1.497 com garantia de 30 dias. Depoimentos reais. Fale no WhatsApp agora!" />
+    <meta name="keywords" content="criar site profissional que vende, quanto custa site profissional 2026, site que atrai clientes online, melhor site para negócio pequeno" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Site Profissional que Vende – SiteImpacto" />
+    <meta property="og:description" content="Transforme seu negócio com um site profissional que atrai clientes 24h." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" />
+    <meta property="og:type" content="website" />
+
+    <!-- Fonts: Inter for high-end feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                dark: '#050505',
+                navy: '#0A0A0B',
+                accent: '#3B82F6',
+                emerald: '#10B981',
+                slate: '#64748b',
+                whatsapp: '#25D366'
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 5s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body { 
+        background-color: #050505;
+        color: #ffffff;
+      }
+      /* Garante que o scroll não pare embaixo do header fixo */
+      section[id] {
+        scroll-margin-top: 110px;
+      }
+      .glass-card { 
+        background: rgba(255, 255, 255, 0.03); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255, 255, 255, 0.08); 
+      }
+      .text-balance { text-wrap: balance; }
+      ::selection { background: #3B82F6; color: white; }
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4"
+      }
+    }
+    </script>
+  </head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
