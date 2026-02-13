@@ -18,7 +18,7 @@ const Benefits: React.FC = () => {
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
               </div>
               <h3 className="text-3xl font-black mb-6 text-white">Briefing Estratégico</h3>
-              <p className="text-brand-slate text-lg leading-relaxed">Entendemos seu modelo de negócio no detalhe antes de desenhar qualquer linha de código. Cada projeto na SiteImpacto nasce de uma análise profunda de mercado.</p>
+              <p className="text-brand-slate text-lg leading-relaxed">Entendemos seu modelo de negócio no detalhe antes de desenhar qualquer linha de código. Cada projeto na <strong>SITEIMPACT</strong> nasce de uma análise profunda de mercado.</p>
             </div>
             
             <div className="mt-12 pt-12 border-t border-white/5 flex items-center gap-6 relative z-10">

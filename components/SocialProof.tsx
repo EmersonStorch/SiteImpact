@@ -17,7 +17,7 @@ const testimonials = [
   {
     name: 'Marcos Silva',
     role: 'PME Industrial',
-    quote: 'A SiteImpacto não apenas fez o site, eles criaram a estratégia que trouxe novos parceiros comerciais para nossa indústria.',
+    quote: 'A SITEIMPACT não apenas fez o site, eles criaram a estratégia que trouxe novos parceiros comerciais para nossa indústria.',
     img: 'https://i.pravatar.cc/150?u=marc'
   }
 ];
@@ -58,7 +58,6 @@ const SocialProof: React.FC = () => {
             <p className="text-brand-slate mt-4 text-sm">Entregues nos últimos 12 meses com foco total em ROI para o cliente final.</p>
           </div>
           <div className="md:col-span-7 flex flex-wrap justify-center md:justify-end gap-12 opacity-30 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Logotipos neutros representativos de marcas profissionais */}
             <div className="text-white font-black italic text-xl">LUMINA</div>
             <div className="text-white font-black italic text-xl">NEXUS</div>
             <div className="text-white font-black italic text-xl">VERTICE</div>

@@ -11,17 +11,46 @@ import WhatsAppButton from './components/WhatsAppButton';
 
 const App: React.FC = () => {
   return (
-    <div className="relative selection:bg-brand-accent selection:text-white">
-      {/* High-end Header */}
-      <header className="fixed top-0 left-0 w-full z-[100] transition-all duration-300">
+    <div className="relative">
+      <header className="fixed top-0 left-0 w-full z-[100]">
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="glass-card rounded-2xl px-6 py-4 flex justify-between items-center shadow-2xl">
-            <a href="#home" className="flex items-center gap-3 group cursor-pointer">
-              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-500 shadow-xl">
-                <svg className="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          <div className="glass-card rounded-2xl px-6 py-4 flex justify-between items-center shadow-2xl border-white/5">
+            <a href="#home" className="flex items-center gap-4 group cursor-pointer">
+              {/* Novo Ícone de Alto Impacto */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-white blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+                <div className="relative w-12 h-12 bg-gradient-to-br from-white to-brand-silver rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.3)] border border-white/20">
+                  <svg 
+                    className="w-7 h-7 text-brand-dark" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path 
+                      d="M13 2L3 14H12L11 22L21 10H12L13 2Z" 
+                      fill="currentColor" 
+                      stroke="currentColor" 
+                      strokeWidth="1.5" 
+                      strokeLinejoin="round"
+                    />
+                    <path 
+                      d="M12 10H21L11 22" 
+                      stroke="white" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      className="opacity-50"
+                    />
+                  </svg>
+                </div>
               </div>
-              <div className="text-xl font-black tracking-tighter uppercase">
-                Site<span className="text-brand-accent">Impacto</span>
+              
+              <div className="flex flex-col">
+                <div className="text-2xl font-black tracking-[ -0.05em] uppercase leading-none">
+                  SITE<span className="text-brand-accent">IMPACT</span>
+                </div>
+                <div className="text-[8px] font-bold uppercase tracking-[0.4em] text-brand-slate mt-1 opacity-70">
+                  Digital Excellence
+                </div>
               </div>
             </a>
             

@@ -26,7 +26,7 @@ const Guarantee: React.FC = () => {
             <div className="max-w-2xl">
               <h3 className="text-3xl font-black mb-6 text-white">Garantia Blindada de 30 Dias</h3>
               <p className="text-brand-slate leading-relaxed text-lg font-medium">
-                Na SiteImpacto, o risco é nosso. Se após 30 dias você não sentir que sua nova presença digital reflete a qualidade do seu negócio, <strong>devolvemos 100% do seu investimento</strong>. Sem perguntas, sem burocracia.
+                Na <strong>SITEIMPACT</strong>, o risco é nosso. Se após 30 dias você não sentir que sua nova presença digital reflete a qualidade do seu negócio, <strong>devolvemos 100% do seu investimento</strong>. Sem perguntas, sem burocracia.
               </p>
             </div>
           </div>

@@ -33,40 +33,38 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-brand-dark">
       
-      {/* Background Carousel Layer */}
       <div className="absolute inset-0 z-0">
         {slides.map((slide, i) => (
           <div 
             key={i}
-            className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${active === i ? 'opacity-40 scale-100' : 'opacity-0 scale-110'}`}
+            className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${active === i ? 'opacity-30 scale-100' : 'opacity-0 scale-110'}`}
           >
             <img 
               src={slide.image} 
-              className="w-full h-full object-cover grayscale-[40%] brightness-[0.6]" 
+              className="w-full h-full object-cover grayscale brightness-[0.4]" 
               alt={slide.label} 
             />
           </div>
         ))}
-        {/* Overlays para garantir legibilidade do texto */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-transparent z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/40 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/50 z-10"></div>
       </div>
 
       <div className="max-w-7xl mx-auto w-full px-6 relative z-20">
         <div className="max-w-4xl">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand-emerald text-[11px] font-black uppercase tracking-[0.25em] mb-10 animate-fade-in shadow-xl backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-brand-emerald animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand-slate text-[10px] font-black uppercase tracking-[0.3em] mb-10 shadow-xl backdrop-blur-md">
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
             Performance Digital Rio de Janeiro
           </div>
           
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl">
-            Criamos sua <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/40">Máquina de <br/>Vendas Digital.</span>
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.85] mb-10 text-white drop-shadow-2xl text-balance">
+            Sua Nova <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">Máquina de <br/>Vendas Digital.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-brand-slate max-w-2xl mb-14 leading-relaxed font-medium drop-shadow-md">
-            Desenvolvemos ecossistemas digitais de alto impacto. 
-            Do briefing à conversão, sua empresa pronta para <strong>liderar o mercado brasileiro</strong>.
+          <p className="text-xl md:text-2xl text-brand-slate max-w-2xl mb-14 leading-relaxed font-medium">
+            Desenvolvemos sites com estética premium e performance extrema. 
+            Do Rio para o Brasil, a <strong>SITEIMPACT</strong> redefine sua presença online.
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 mb-20">
@@ -74,13 +72,13 @@ const Hero: React.FC = () => {
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-12 py-6 bg-white text-brand-dark font-black rounded-2xl hover:bg-brand-accent hover:text-white transition-all duration-500 shadow-2xl hover:shadow-brand-accent/40 flex items-center justify-center gap-4 text-xl group"
+              className="px-12 py-6 bg-white text-brand-dark font-black rounded-2xl hover:bg-brand-accent hover:text-white transition-all duration-500 shadow-2xl flex items-center justify-center gap-4 text-xl group"
             >
               Consultoria Grátis
               <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
             
-            <div className="flex items-center gap-5 border-l border-white/20 pl-8">
+            <div className="flex items-center gap-5 border-l border-white/10 pl-8">
               <div className="text-3xl font-black text-white">15 Dias</div>
               <div className="text-[11px] font-bold text-brand-slate uppercase tracking-widest leading-none">Entrega no<br/>Rio e Brasil</div>
             </div>
@@ -88,26 +86,11 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Floating Indicators / Labels */}
-      <div className="absolute bottom-12 right-12 z-30 hidden lg:block">
-        <div className="flex flex-col items-end gap-2">
-          <span className="text-brand-emerald text-[10px] font-black uppercase tracking-[0.3em] mb-2">Agora Visualizando:</span>
-          <div className="text-2xl font-black text-white tracking-tighter">{slides[active].label}</div>
-          <div className="w-32 h-1 bg-white/10 rounded-full overflow-hidden mt-4">
-             <div 
-              className="h-full bg-brand-accent transition-all duration-[6000ms] ease-linear" 
-              style={{ width: '100%', key: active }} 
-             ></div>
-          </div>
-        </div>
-      </div>
-
-      {/* Stats Card Overlayed with better glassmorphism */}
       <div className="absolute top-1/2 right-12 -translate-y-1/2 z-30 hidden xl:block">
-        <div className="glass-card p-8 rounded-[2.5rem] shadow-2xl border border-white/10 hover:border-brand-accent/50 transition-all duration-700 animate-float">
+        <div className="glass-card p-8 rounded-[2.5rem] shadow-2xl border border-white/5 hover:border-white/20 transition-all duration-700 animate-float">
           <div className="flex flex-col gap-8">
             <div className="flex items-center gap-5">
-              <div className="w-14 h-14 bg-brand-emerald/20 rounded-2xl flex items-center justify-center text-brand-emerald shadow-inner">
+              <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-white shadow-inner">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
               </div>
               <div>
@@ -117,7 +100,7 @@ const Hero: React.FC = () => {
             </div>
             
             <div className="flex items-center gap-5">
-              <div className="w-14 h-14 bg-brand-accent/20 rounded-2xl flex items-center justify-center text-brand-accent shadow-inner">
+              <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center text-white shadow-inner">
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
               <div>
@@ -128,7 +111,6 @@ const Hero: React.FC = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };
