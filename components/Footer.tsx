@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { BRAND_NAME, CONTACT_EMAIL, OWNER_NAME, WHATSAPP_NUMBER } from '../constants';
+import { LogoSVG } from '../App';
 
 const Footer: React.FC = () => {
   useEffect(() => {
@@ -46,47 +47,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-brand-navy text-white py-20 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
-        <div>
-          {/* Logo Impactante (Mesmo padrão do Header) */}
-          <div className="flex items-center gap-4 group mb-8">
-            <div className="relative">
-              <div className="absolute inset-0 bg-white blur-xl opacity-10 group-hover:opacity-30 transition-opacity duration-700"></div>
-              <div className="relative w-12 h-12 bg-gradient-to-br from-white to-brand-silver rounded-xl flex items-center justify-center transform transition-all duration-500 shadow-xl border border-white/20">
-                <svg 
-                  className="w-7 h-7 text-brand-dark" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path 
-                    d="M13 2L3 14H12L11 22L21 10H12L13 2Z" 
-                    fill="currentColor" 
-                    stroke="currentColor" 
-                    strokeWidth="1.5" 
-                    strokeLinejoin="round"
-                  />
-                  <path 
-                    d="M12 10H21L11 22" 
-                    stroke="white" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    className="opacity-50"
-                  />
-                </svg>
-              </div>
-            </div>
-            
-            <div className="flex flex-col">
-              <div className="text-2xl font-black tracking-[-0.05em] uppercase leading-none text-white">
-                SITE<span className="text-brand-accent">IMPACT</span>
-              </div>
-              <div className="text-[8px] font-bold uppercase tracking-[0.4em] text-brand-slate mt-1 opacity-70">
-                Digital Excellence
-              </div>
-            </div>
-          </div>
-
-          <p className="text-brand-slate mb-8 leading-relaxed max-w-xs">
+        <div className="flex flex-col items-start">
+          <LogoSVG className="h-14 mb-8 -ml-4" />
+          <p className="text-brand-slate mb-8 leading-relaxed max-w-xs text-sm">
             Especialistas em presença digital de alta performance. Redefinindo o padrão de sites para empresas brasileiras.
           </p>
           <div className="flex gap-4">

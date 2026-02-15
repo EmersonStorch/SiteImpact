@@ -9,49 +9,57 @@ import Guarantee from './components/Guarantee';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
+export const LogoSVG: React.FC<{ className?: string }> = ({ className = "h-14" }) => (
+  <div className={`flex flex-col items-center group cursor-pointer ${className}`}>
+    <div className="relative select-none">
+      <svg 
+        viewBox="0 0 240 65" 
+        className="h-full w-auto"
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ minWidth: '180px' }}
+      >
+        <defs>
+          <style>
+            {`
+              @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+              .logo-text { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 38px; letter-spacing: -0.04em; }
+              .logo-subtext { font-family: 'Inter', sans-serif; font-weight: 900; font-size: 10px; fill: #94A3B8; text-transform: uppercase; }
+              .fill-white { fill: #FFFFFF; }
+              .fill-slate { fill: #94A3B8; }
+            `}
+          </style>
+        </defs>
+        
+        {/* Linha Principal: SITEIMPACT */}
+        <text x="0" y="36" className="logo-text">
+          <tspan className="fill-white">SITE</tspan>
+          <tspan className="fill-slate">IMPACT</tspan>
+        </text>
+
+        {/* Linha Inferior: DIGITAL EXCELLENCE - Alinhamento Perfeito */}
+        <text 
+          x="0" 
+          y="58" 
+          className="logo-subtext group-hover:fill-white transition-colors duration-300" 
+          textLength="236" 
+          lengthAdjust="spacing"
+        >
+          DIGITAL EXCELLENCE
+        </text>
+      </svg>
+    </div>
+  </div>
+);
+
 const App: React.FC = () => {
   return (
     <div className="relative">
       <header className="fixed top-0 left-0 w-full z-[100]">
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="glass-card rounded-2xl px-6 py-4 flex justify-between items-center shadow-2xl border-white/5">
-            <a href="#home" className="flex items-center gap-4 group cursor-pointer">
-              {/* Novo Ícone de Alto Impacto */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-white blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
-                <div className="relative w-12 h-12 bg-gradient-to-br from-white to-brand-silver rounded-xl flex items-center justify-center transform group-hover:scale-110 group-hover:rotate-[10deg] transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.3)] border border-white/20">
-                  <svg 
-                    className="w-7 h-7 text-brand-dark" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path 
-                      d="M13 2L3 14H12L11 22L21 10H12L13 2Z" 
-                      fill="currentColor" 
-                      stroke="currentColor" 
-                      strokeWidth="1.5" 
-                      strokeLinejoin="round"
-                    />
-                    <path 
-                      d="M12 10H21L11 22" 
-                      stroke="white" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      className="opacity-50"
-                    />
-                  </svg>
-                </div>
-              </div>
-              
-              <div className="flex flex-col">
-                <div className="text-2xl font-black tracking-[ -0.05em] uppercase leading-none">
-                  SITE<span className="text-brand-accent">IMPACT</span>
-                </div>
-                <div className="text-[8px] font-bold uppercase tracking-[0.4em] text-brand-slate mt-1 opacity-70">
-                  Digital Excellence
-                </div>
-              </div>
+          <div className="glass-card rounded-2xl px-8 py-4 flex justify-between items-center shadow-2xl border-white/5">
+            <a href="#home" className="flex items-center">
+              <LogoSVG className="h-12 md:h-14" />
             </a>
             
             <nav className="hidden md:flex items-center gap-10">
