@@ -8,6 +8,7 @@ import FAQ from './components/FAQ';
 import Guarantee from './components/Guarantee';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import CRM from './components/CRM';
 
 export const LogoSVG: React.FC<{ className?: string }> = ({ className = "h-14" }) => (
   <div className={`flex flex-col items-center group cursor-pointer ${className}`}>
@@ -37,7 +38,7 @@ export const LogoSVG: React.FC<{ className?: string }> = ({ className = "h-14" }
           <tspan className="fill-slate">IMPACT</tspan>
         </text>
 
-        {/* Linha Inferior: DIGITAL EXCELLENCE - Alinhamento Perfeito */}
+        {/* Linha Inferior: DIGITAL EXCELLENCE */}
         <text 
           x="0" 
           y="58" 
@@ -66,9 +67,11 @@ const App: React.FC = () => {
               <a href="#beneficios" className="text-xs font-black uppercase tracking-[0.2em] text-brand-slate hover:text-white transition-colors">Vantagens</a>
               <a href="#resultados" className="text-xs font-black uppercase tracking-[0.2em] text-brand-slate hover:text-white transition-colors">Resultados</a>
               <a href="#precos" className="text-xs font-black uppercase tracking-[0.2em] text-brand-slate hover:text-white transition-colors">Planos</a>
+              <a href="#crm" className="text-xs font-black uppercase tracking-[0.2em] text-brand-slate hover:text-white transition-colors">CRM</a>
+              <a href="#faq" className="text-xs font-black uppercase tracking-[0.2em] text-brand-slate hover:text-white transition-colors">FAQ</a>
               <a 
                 href="#precos" 
-                className="bg-white text-brand-dark px-6 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] hover:bg-brand-accent hover:text-white transition-all shadow-lg"
+                className="bg-brand-accent text-white px-6 py-2.5 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] hover:bg-white hover:text-brand-dark transition-all shadow-lg border border-brand-accent/50"
               >
                 Orçamento
               </a>
@@ -82,6 +85,7 @@ const App: React.FC = () => {
         <Benefits />
         <SocialProof />
         <Pricing />
+        <CRM />
         <FAQ />
         <Guarantee />
       </main>

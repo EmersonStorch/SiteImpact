@@ -4,12 +4,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SITEIMPACT – Sites Profissionais de Alta Performance | Rio de Janeiro</title>
-    <meta name="description" content="Crie sites de luxo com a SITEIMPACT. Performance extrema e design minimalista para empresas que buscam o topo do mercado." />
+    <title>CriaLead | O CRM #1 Para Agências Digitais</title>
+    <meta name="description" content="Gerencie leads, pipeline e orçamentos em uma plataforma moderna feita para agências digitais. Comece grátis hoje." />
     
     <!-- Open Graph -->
-    <meta property="og:title" content="SITEIMPACT – Performance e Design" />
-    <meta property="og:description" content="Sua nova máquina de vendas digital com estética premium." />
+    <meta property="og:title" content="CriaLead – O CRM #1 Para Agências Digitais" />
+    <meta property="og:description" content="Pare de perder leads em planilhas. Gerencie clientes, pipeline e orçamentos em uma plataforma moderna." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" />
     <meta property="og:type" content="website" />
 
@@ -26,12 +26,13 @@
           extend: {
             fontFamily: {
               sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
             },
             colors: {
               brand: {
                 dark: '#050505',
                 navy: '#0A0A0B',
-                accent: '#94A3B8', /* Cinza Platina/Slate */
+                accent: '#94A3B8', /* Cinza Platina/Slate — cor principal do menu */
                 silver: '#CBD5E1',
                 emerald: '#10B981',
                 slate: '#94A3B8',
@@ -41,11 +42,16 @@
             animation: {
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
               'float': 'float 5s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.4s ease-out forwards',
             },
             keyframes: {
               float: {
                 '0%, 100%': { transform: 'translateY(0)' },
                 '50%': { transform: 'translateY(-10px)' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateX(20px)' },
+                '100%': { opacity: '1', transform: 'translateX(0)' },
               }
             }
           }
@@ -69,7 +75,28 @@
         border: 1px solid rgba(255, 255, 255, 0.05); 
       }
       .text-balance { text-wrap: balance; }
-      ::selection { background: #FFFFFF; color: #000000; }
+      ::selection { background: #94A3B8; color: #050505; }
+
+      /* Animação de entrada para alertas */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(20px); }
+        to   { opacity: 1; transform: translateX(0); }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.4s ease-out forwards;
+      }
+
+      /* Scrollbar sutil */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #050505; }
+      ::-webkit-scrollbar-thumb { background: #94A3B8; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #CBD5E1; }
+
+      /* Estilo do select no CRM */
+      select option {
+        background-color: #0A0A0B;
+        color: #ffffff;
+      }
     </style>
 
     <script type="importmap">
